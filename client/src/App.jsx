@@ -48,7 +48,7 @@ function App() {
         </div>
 
         <div className="button-div">
-          <Button children={"Click Me"}></Button>
+          <Button children={"Done"}></Button>
         </div>
       </div>
     </div>
