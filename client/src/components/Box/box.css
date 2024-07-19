@@ -1,0 +1,8 @@
+.box {
+  width: 370px;
+  height: 326px;
+  position: relative;
+  padding: 10px 0;
+  background: #ffffff;
+  optional: add box shadow;
+}

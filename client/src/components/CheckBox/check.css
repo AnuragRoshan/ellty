@@ -1,0 +1,15 @@
+.check-top {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+}
+.check-top img {
+  border: transparent;
+}
+.check-top:hover {
+  border: 1px solid #cdcdcd;
+}
