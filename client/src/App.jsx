@@ -12,43 +12,27 @@ function App() {
     setIsChecked(!isChecked);
   };
 
+  const labels = ["All Pages", "Page 1", "Page 2", "Page 3", "Page 4"];
+
   return (
     <div className="top">
       <div className="inner-box">
-        <CheckboxWithLabel
-          label="All Pages"
-          checked={isChecked}
-          onChange={handleCheckboxChange}
-        />
-        <div className="horizontal-line">
-          <hr className="grey-line" />
-        </div>
-        <CheckboxWithLabel
-          label="Page 1"
-          checked={isChecked}
-          onChange={handleCheckboxChange}
-        />
-        <CheckboxWithLabel
-          label="Page 2"
-          checked={isChecked}
-          onChange={handleCheckboxChange}
-        />
-        <CheckboxWithLabel
-          label="Page 3"
-          checked={isChecked}
-          onChange={handleCheckboxChange}
-        />
-        <CheckboxWithLabel
-          label="Page 4"
-          checked={isChecked}
-          onChange={handleCheckboxChange}
-        />
-        <div className="horizontal-line">
-          <hr className="grey-line" />
-        </div>
-
+        {labels.map((label, index) => (
+          <div key={index}>
+            <CheckboxWithLabel
+              label={label}
+              checked={isChecked}
+              onChange={handleCheckboxChange}
+            />
+            {index === 0 || index === labels.length - 1 ? (
+              <div className="horizontal-line">
+                <hr className="grey-line" />
+              </div>
+            ) : null}
+          </div>
+        ))}
         <div className="button-div">
-          <Button children={"Done"}></Button>
+          <Button children={"Done"} />
         </div>
       </div>
     </div>
